@@ -170,23 +170,24 @@ function startGame() {
 }
 
 function gameOver() {
-	beatCaudaVorazSound.pause(); // Pausar o som de fundo
-	vozCaudavorazSound.play();
-	vozCaudavorazSound.onended = function () {
-		alert('Você se mordeu e acabou morto com o próprio veneno X_X');
-		beatCaudaVorazSound.play(); // Retomar o som de fundo após o alerta
-	};
+    beatCaudaVorazSound.pause(); 
+    vozCaudavorazSound.play();
+    vozCaudavorazSound.onended = function () {
+        alert('Você se mordeu e acabou morto com o próprio veneno X_X');
+        beatCaudaVorazSound.play(); 
+        location.reload(); // recarrega a página
+    };
 }
 
 function gameOverOrange() {
-	beatCaudaVorazSound.pause(); // Pausar o som de fundo
-	vozCaudavorazSound.play();
-	vozCaudavorazSound.onended = function () {
-		alert('Laranjas fazem sua cobrinha ficar menor, você chegou no seu limite e morreu de desnutrição X_X');
-		beatCaudaVorazSound.play(); // Retomar o som de fundo após o alerta
-	};
+    beatCaudaVorazSound.pause(); 
+    vozCaudavorazSound.play();
+    vozCaudavorazSound.onended = function () {
+        alert('Laranjas fazem sua cobrinha ficar menor, você chegou no seu limite e morreu de desnutrição X_X');
+        beatCaudaVorazSound.play(); 
+        location.reload(); // recarrega a página
+    };
 }
-
 document.getElementById('restart').addEventListener('click', function () {
 	clearInterval(jogo);
 	tailSize = 1; // Resetar o tamanho da cauda
