@@ -1,0 +1,23 @@
+@media (max-width: 1024px) {
+  .game-wrapper {
+    width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+	body {
+		background-color: #ffffff;
+	}
+
+	.hud {
+		display: none;
+	}
+
+	.game-container {
+		width: 100%;
+	}
+
+	.group {
+		border: 1px solid transparent;
+	}
+}
